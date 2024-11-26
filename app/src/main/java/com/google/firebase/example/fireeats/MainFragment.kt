@@ -200,6 +200,13 @@ class MainFragment : Fragment(),
         if(filters.hasPrice()){
             query = query.whereEqualTo(Restaurant.FIELD_PRICE, filters.price)
         }
+        if(filters.hasSortBy()){
+            query = query.orderBy(filters.sortBy.toString(), filters.sortDirection)
+        }
+
+        query = query.limit(LIMIT.toLong())
+
+        adapter?.setQuery(query)
 
         // Set header
         binding.textCurrentSearch.text = HtmlCompat.fromHtml(
