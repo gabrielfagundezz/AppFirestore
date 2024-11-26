@@ -77,4 +77,6 @@ dependencies {
     // Third-party libraries
     implementation("me.zhanghai.android.materialratingbar:library:1.4.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
 }
