@@ -55,10 +55,8 @@ class RestaurantDetailFragment : Fragment(),
 
         // Initialize Firestore
         firestore = Firebase.firestore
-
         // Get reference to the restaurant
         restaurantRef = firestore.collection("restaurants").document(restaurantId)
-
         // Get ratings
         val ratingsQuery = restaurantRef
                 .collection("ratings")
