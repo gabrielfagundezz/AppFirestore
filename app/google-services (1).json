@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "850832623450",
+    "project_id": "friendly-eats-f9f04",
+    "storage_bucket": "friendly-eats-f9f04.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850832623450:android:ed51d824594b8b06565563",
+        "android_client_info": {
+          "package_name": "com.google.firebase.example.fireeats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCriL0grOj-nwog80F-_y1V_7lKzJDRPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
