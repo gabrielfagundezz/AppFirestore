@@ -189,6 +189,12 @@ class MainFragment : Fragment(),
 
     override fun onFilter(filters: Filters) {
         // TODO(developer): Construct new query
+        var query: Query = firestore.collection("restaurants")
+
+        if(filters.hasCategory()){
+            query = query.whereEqualTo(Restaurant.FIELD_CITY, filters.city)
+        }
+
 
         // Set header
         binding.textCurrentSearch.text = HtmlCompat.fromHtml(
