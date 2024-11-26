@@ -192,9 +192,14 @@ class MainFragment : Fragment(),
         var query: Query = firestore.collection("restaurants")
 
         if(filters.hasCategory()){
+            query = query.whereEqualTo(Restaurant.FIELD_CATEGORY, filters.category)
+        }
+        if(filters.hasCity()){
             query = query.whereEqualTo(Restaurant.FIELD_CITY, filters.city)
         }
-
+        if(filters.hasPrice()){
+            query = query.whereEqualTo(Restaurant.FIELD_PRICE, filters.price)
+        }
 
         // Set header
         binding.textCurrentSearch.text = HtmlCompat.fromHtml(
