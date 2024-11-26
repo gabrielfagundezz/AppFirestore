@@ -208,6 +208,15 @@ class MainFragment : Fragment(),
 
         adapter?.setQuery(query)
 
+        binding.textCurrentSearch.text = HtmlCompat.fromHtml(
+            filters.getSearchDescription(requireContext()),
+            HtmlCompat.FROM_HTML_MODE_LEGACY
+        )
+
+        binding.textCurrentSortBy.text = filters.getOrderDescription(requireContext())
+
+        viewModel.filters = filters
+
         // Set header
         binding.textCurrentSearch.text = HtmlCompat.fromHtml(
             filters.getSearchDescription(requireContext()),
